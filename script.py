@@ -2,9 +2,9 @@ import os
 from random import randint
 
 try:
-    for i in range(1, 2):
+    for i in range(1, 365):
         try:
-            for j in range(0, 2):
+            for j in range(0, randint(1, 40)):
                 date = str(365+i) + ' days ago'
                 with open('changes.txt', 'a') as file:
                     file.write(date)
@@ -13,4 +13,4 @@ try:
         except Exception as err:
             print(f"Unexpected {err=}, {type(err)=}")
 except Exception as err:
-    print(f"Unexpected {err=}, {type(err)=}")
+    print(f"Unexpected {err=}, {type(err)=}")          
